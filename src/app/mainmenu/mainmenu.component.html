@@ -1,0 +1,31 @@
+<div style="height: 80vh;">
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+    <button mat-icon-button (click)="sidenavToggle()">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span class="menu-spacer"></span>
+    <span>Responsive Navigation</span>
+    <span class="menu-spacer"></span>
+    <div>
+        <a href="#" mat-button>Menu Item 1</a>
+        <a href="#" mat-button>Menu Item 2</a>
+        <a href="#" mat-button>Menu Item 3</a>
+        <a href="#" mat-button>Menu Item 4</a>
+        <a href="#" mat-button>Menu Item 5</a>
+        <a href="#" mat-button>Menu Item 6</a>
+    </div>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<div class="sideBarSection" [ngClass]="isOpenSideBar ? 'slide':'collapse'" [@openCloseSideBarMenu]="isOpenSideBar ? 'slide': 'collapse'">
+    <ul>
+    <li><a href=""><mat-icon class="icons-st">dashboard</mat-icon> <span class="icons-txt">Dashboard</span></a></li>
+    <li><a href=""><mat-icon class="icons-st">eco</mat-icon> <span class="icons-txt">Purchase</span></a></li>
+    <li><a href=""><mat-icon class="icons-st">verified_user</mat-icon> <span class="icons-txt">Functions</span></a></li>
+    <li><a href=""><mat-icon class="icons-st">pets</mat-icon><span class="icons-txt">Mails</span></a></li>
+    <li><a href=""><mat-icon class="icons-st">visibility</mat-icon><span class="icons-txt">Tweets</span></a></li>
+    </ul>
+</div>
+
+</div>  

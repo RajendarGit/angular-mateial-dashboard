@@ -1,0 +1,41 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+.btn {
+	@include theme-button(.8rem 2rem, none, 2rem 1rem);
+}
+.mat-button, .mat-raised-button, .mat-icon-button, .mat-stroked-button, .mat-flat-button, .mat-fab, .mat-mini-fab {
+	font-family: $font-family-main;
+}
+.dark-theme {
+	.btn {
+		&.btn-primary {
+			@include dark-theme-primary-button();
+		}
+		&.btn-info {
+			@include dark-theme-info-button();
+		}
+		&.btn-warning {
+			@include dark-theme-warning-button();
+		}
+		&.btn-danger {
+			@include dark-theme-danger-button();
+		}
+	}
+}
+.light-theme {
+	.btn {
+		&.btn-primary {
+			@include light-theme-primary-button();
+		}
+		&.btn-info {
+			@include light-theme-info-button();
+		}
+		&.btn-warning {
+			@include light-theme-warning-button();
+		}
+		&.btn-danger {
+			@include light-theme-danger-button();
+		}
+	}
+}

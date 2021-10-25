@@ -1,0 +1,9 @@
+@function theme($key) {
+    @return map-get($theme, $key);
+}
+@function dark-theme($key) {
+    @return map-get($dark-theme, $key);
+}
+@function light-theme($key) {
+    @return map-get($light-theme, $key);
+}

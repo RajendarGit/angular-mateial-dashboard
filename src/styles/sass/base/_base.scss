@@ -1,0 +1,23 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+html, body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+body {
+  @include typo-base();
+}
+.main-wrapper {
+  min-height: 100%;
+  height: auto !important; /* This line and the next line are not necessary unless you need IE6 support */
+  height: 100%;
+}
+a {
+  color: dark-theme(url-color);
+}
+h1, h2, h3, h4, h5, h6, p {
+  a {
+    color: dark-theme(url-color);
+  }
+}

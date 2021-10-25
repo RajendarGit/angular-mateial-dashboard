@@ -1,0 +1,43 @@
+@media (min-width: 375px) {
+    
+}
+@media (min-width: 576px) {
+    
+}
+@media (min-width: 768px) {
+    
+}
+@media (min-width: 992px) {
+    
+}
+@media (min-width: 1200px) {
+    .btn {
+        @include theme-button(.8rem 2rem, none, 2rem 2rem);
+    }
+    h1 {
+        @include typo-font-size(3.5rem);
+    }
+    h2 {
+        @include typo-font-size(3rem);
+    }
+    h3 {
+        @include typo-font-size(2.25rem);
+    }
+    h4 {
+        @include typo-font-size(1.75rem);
+    }
+    h5 {
+        @include typo-font-size(1.5rem);
+    }
+    h6 {
+        @include typo-font-size(1.25rem);
+    }
+    p {
+        &.type-1 {
+            @include typo-font-size(1.125rem);
+        }
+        &.type-2 {
+            @include typo-font-size(1rem);
+        }
+    }
+}

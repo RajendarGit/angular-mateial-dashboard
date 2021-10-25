@@ -1,0 +1,65 @@
+/**
+ * Basic typography style
+ */
+h1, h2, h3, h4, h5, h6, p {
+  @include typo-base();
+  @include head-base();
+}
+h1 {
+  @include typo-font-size(2rem);
+}
+h2 {
+  @include typo-font-size(1.75rem);
+}
+h3 {
+  @include typo-font-size(1.5rem);
+}
+h4 {
+  @include typo-font-size(1.25rem);
+}
+h5 {
+  @include typo-font-size(1.125rem);
+}
+h6 {
+  @include typo-font-size(1rem);
+}
+p {
+  @include content-base();
+  &.type-3 {
+    @include typo-font-size(0.875rem);
+  }
+  &.type-4 {
+    @include typo-font-size(0.75rem);
+  }
+}
+a {
+  @include text-decoration(none);
+  &:hover {
+    @include text-decoration(none);
+  }
+  &:focus {
+		outline: 0 !important;
+	}
+}
+ul , ol {
+  @include list-style(none);
+  padding: 0;
+  &.list-style-type-disc {
+    li {
+      &::before {
+        font-family: "Font Awesome 5 Free";
+        content: "\f111";
+        display: inline-block;
+        padding-right: 1rem;
+        vertical-align: middle;
+        font-weight: 900;
+        @include typo-font-size(0.3rem);
+        margin-left: 2rem;
+      }
+    }
+  }
+}
+
+iframe {
+  width: 100%;
+}

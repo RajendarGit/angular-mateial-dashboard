@@ -1,0 +1,129 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+/// Event wrapper
+/// @param {Bool} $self [false] - Whether or not to include current selector
+@mixin on-event($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  } @else {
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
+}
+
+@mixin box-shadow($shadow) {
+	box-shadow: $shadow;
+	-webkit-box-shadow: $shadow;
+	-moz-box-shadow: $shadow;
+}
+
+@mixin box-shadow-two-way($var1,$var2) {
+  box-shadow: $var1,$var2;
+	-webkit-box-shadow: $var1,$var2;
+	-moz-box-shadow: $var1,$var2;
+}
+
+@mixin transition($var) {
+	transition: $var;
+	-webkit-transition: $var;
+	-moz-transition: $var;
+}
+
+@mixin border-radius($radius) {
+	border-radius: $radius;
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+}
+
+@mixin background-size($var) {
+	-webkit-background-size: $var;
+  -moz-background-size: $var;
+  -o-background-size: $var;
+  background-size: $var;
+}
+
+@mixin  opacity($value) {
+	$IEValue: $value*100;
+	opacity: $value;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
+	filter: alpha(opacity=$IEValue);
+}
+
+@mixin typo-base() {
+	font-family: $font-family-main;
+	color: theme(theme-color);
+	font-weight: theme(font-weight);
+	margin: theme(margin);
+	letter-spacing: theme(letter-space);
+	line-height: theme(line-height);
+}
+
+@mixin head-base($typo-weight: 700) {
+	font-weight: $typo-weight;
+}
+
+@mixin content-base($typo-weight: 400, $typo-size: 1rem) {
+	font-weight: $typo-weight;
+	font-size: $typo-size;
+}
+
+@mixin typo-font-size($font-size) {
+	font-size: $font-size;
+}
+
+@mixin text-decoration($dec) {
+	text-decoration: $dec;
+}
+
+@mixin list-style($list-style) {
+	list-style: $list-style;
+}
+
+@mixin theme-button($padding, $border, $radius) {
+	color: theme(theme-pure-color);
+	padding: $padding;
+	border: $border;
+	@include border-radius($radius);
+}
+
+@mixin dark-theme-primary-button() {
+	background-color: dark-theme(primary-color);
+}
+
+@mixin dark-theme-info-button() {
+	background-color: dark-theme(info-color);
+}
+
+@mixin dark-theme-warning-button() {
+	background-color: dark-theme(warning-color);
+}
+
+@mixin dark-theme-danger-button() {
+	background-color: dark-theme(danger-color);
+}
+
+@mixin light-theme-primary-button() {
+	background-color: light-theme(primary-color);
+}
+
+@mixin light-theme-info-button() {
+	background-color: light-theme(info-color);
+}
+
+@mixin light-theme-warning-button() {
+	background-color: light-theme(warning-color);
+}
+
+@mixin light-theme-danger-button() {
+	background-color: light-theme(danger-color);
+}

@@ -1,0 +1,41 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/// Color theory
+$font-family-main: 'Open Sans', sans-serif;
+$theme: (
+    theme-pure-color: #ffffff,
+    theme-color: #000000,
+    font-weight: 400,
+    letter-space: 0.5px,
+    margin: 0,
+    line-height: 1.2,
+);
+
+$dark-theme: (
+    warning-color: #f38921,
+    primary-color: #2980b9, 
+    info-color: #2caed7,
+    success-color: #62a363,
+    trend-color-1: #b06095,
+    danger-color: #E02020,
+    url-color: blue,
+    main-color: #000000,
+    main-heading-color: #474747,
+);
+
+$light-theme: (
+    warning-color: #fab36c,
+    primary-color: #5998c2, 
+    info-color: #63beda,
+    success-color: #75a375,
+    trend-color-1: #ac769a,
+    danger-color: #E02020,
+    url-color: rgb(97, 97, 184),
+    main-color: #383838,
+    main-heading-color: #707070,
+);
+
+
+
